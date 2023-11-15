@@ -1,20 +1,25 @@
 {
-    "rewrites": [
+    "routes": [
         {
             "source": "/",
-            "destination": "https://roami.webflow.io"
+            "destination": "https://roami.webflow.io",
+            "type": "redirect",
+            "statusCode": 301
         },
         {
             "source": "/blog",
-            "destination": "https://roami.webflow.io/blog"
+            "destination": "https://roami.webflow.io/blog",
+            "type": "rewrite"
         },
         {
             "source": "/blogs/(.*)",
-            "destination": "https://roami.webflow.io/blogs/$1"
+            "destination": "https://roami.webflow.io/blogs/$1",
+            "type": "rewrite"
         },
         {
             "source": "/(.*)",
-            "destination": "/"
+            "destination": "/",
+            "type": "rewrite"
         }
     ]
 }
