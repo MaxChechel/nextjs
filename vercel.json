@@ -2,7 +2,7 @@
     "rewrites": [
         {
             "source": "/",
-            "destination": "https://google.com"
+            "destination": "https://roami.webflow.io"
         },
         {
             "source": "/blog",
