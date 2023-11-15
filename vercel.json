@@ -1,23 +1,23 @@
 {
     "routes": [
         {
-            "source": "/",
+            "src": "/",
             "destination": "https://roami.webflow.io",
             "type": "redirect",
             "statusCode": 301
         },
         {
-            "source": "/blog",
+            "src": "/blog",
             "destination": "https://roami.webflow.io/blog",
             "type": "rewrite"
         },
         {
-            "source": "/blogs/(.*)",
+            "src": "/blogs/(.*)",
             "destination": "https://roami.webflow.io/blogs/$1",
             "type": "rewrite"
         },
         {
-            "source": "/(.*)",
+            "src": "/(.*)",
             "destination": "/",
             "type": "rewrite"
         }
