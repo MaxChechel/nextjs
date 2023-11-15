@@ -1,8 +1,8 @@
 {
     "rewrites": [
         {
-            "source": "/test",
-            "destination": "https://roami.webflow.io/"
+            "source": "/(.*)",
+            "destination": "https://your-webflow-project.webflow.io/:1"
         }
     ]
 }
