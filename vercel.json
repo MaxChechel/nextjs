@@ -2,7 +2,7 @@
     "rewrites": [
         {
             "source": "/test",
-            "destination": "/api/hello"
+            "destination": "https://roami.webflow.io/"
         }
     ]
 }
