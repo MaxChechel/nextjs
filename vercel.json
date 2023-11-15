@@ -9,8 +9,8 @@
             "destination": "https://roami.webflow.io/blog"
         },
         {
-            "source": "/blog/(.*)",
-            "destination": "https://roami.webflow.io/blog/$1"
+            "source": "/blogs/(.*)",
+            "destination": "https://roami.webflow.io/blogs/$1"
         },
         {
             "source": "/(.*)",
