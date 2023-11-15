@@ -1,30 +1,30 @@
 // page.tsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 
-// Define a named function for your component
+// Define the component within the same file
 const WebflowContentComponent = () => {
-    const [content, setContent] = React.useState(null);
+    const [content, setContent] = useState<string | null>(null);
 
-    React.useEffect(() => {
+    useEffect(() => {
         fetch('https://roami.webflow.io')
             .then((response) => response.text())
             .then((html) => setContent(html))
             .catch((error) => console.error('Error fetching content:', error));
     }, []);
 
-    return <div dangerouslySetInnerHTML={{ __html: content }} />;
+    return <div dangerouslySetInnerHTML={{ __html: content || '' }} />;
 };
 
-// Dynamically import the component
+// Dynamically import the component with SSR disabled
 const WebflowContent = dynamic(() => Promise.resolve(WebflowContentComponent), {
     ssr: false,
 });
 
-// The main page component
-const Page = () => {
+const Page: React.FC = () => {
     return (
         <main className="flex min-h-screen flex-col items-center justify-center p-24">
+            {/* Other content can go here */}
             <WebflowContent />
         </main>
     );
