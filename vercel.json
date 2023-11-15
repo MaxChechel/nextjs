@@ -1,12 +1,9 @@
 {
-    "redirects": [
+    "rewrites": [
         {
             "source": "/",
-            "destination": "https://roami.webflow.io",
-            "permanent": true
-        }
-    ],
-    "rewrites": [
+            "destination": "https://roami.webflow.io"
+        },
         {
             "source": "/blog",
             "destination": "https://roami.webflow.io/blog"
