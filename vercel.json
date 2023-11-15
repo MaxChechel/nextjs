@@ -1,0 +1,12 @@
+{
+    "rewrites": [
+        {
+            "source": "/destinations/:path*",
+            "destination": "/destinations/:path*"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "https://roami.webflow.io/:1"
+        }
+    ]
+}
